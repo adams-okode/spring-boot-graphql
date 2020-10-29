@@ -9,4 +9,5 @@ import lombok.Setter;
 public class UserInput {
     private String firstName;
     private String email;
+    private String lastName;
 }

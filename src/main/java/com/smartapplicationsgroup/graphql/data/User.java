@@ -24,5 +24,11 @@ public class User extends BaseEntity {
 
     private String firstName;
 
+    private String lastName;
+
+    private Boolean status;
+    
+    private String password;
+
     private String email;
 }

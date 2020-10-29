@@ -6,6 +6,7 @@ schema {
 type User {
   id : ID !
   firstName : String
+  lastName : String
   email : String
   createdAt : String
   updatedAt : String
@@ -14,6 +15,7 @@ type User {
 input UserInput {
   firstName : String !
   email : String !
+  lastName : String !
 }
 
 type UserQuery {

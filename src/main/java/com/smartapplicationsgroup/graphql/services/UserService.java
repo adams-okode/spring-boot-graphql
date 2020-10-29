@@ -42,6 +42,7 @@ public class UserService {
         User user = new User();
         user.setEmail(userInput.getEmail());
         user.setFirstName(userInput.getFirstName());
+        user.setLastName(userInput.getLastName());
         userRepository.save(user);
         return user;
     }
@@ -61,6 +62,7 @@ public class UserService {
         }
         user.setEmail(userInput.getEmail());
         user.setFirstName(userInput.getFirstName());
+        user.setLastName(userInput.getLastName());
         userRepository.save(user);
         return user;
     }

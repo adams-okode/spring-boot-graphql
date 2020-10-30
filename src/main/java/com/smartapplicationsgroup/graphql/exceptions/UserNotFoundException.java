@@ -1,5 +1,6 @@
 package com.smartapplicationsgroup.graphql.exceptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import graphql.ErrorClassification;
@@ -23,7 +24,7 @@ public class UserNotFoundException extends RuntimeException implements GraphQLEr
 
     @Override
     public List<SourceLocation> getLocations() {
-        return null;
+        return new ArrayList<>();
     }
 
 }

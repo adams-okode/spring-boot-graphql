@@ -30,7 +30,7 @@ public class UserMutationResolver implements GraphQLMutationResolver {
      * @return
      * @throws UserNotFoundException
      */
-    public User updateUser(Long id, UserInput userInput) throws UserNotFoundException {
+    public User updateUser(Long id, UserInput userInput) {
         return userService.updateUser(id, userInput);
     }
 }

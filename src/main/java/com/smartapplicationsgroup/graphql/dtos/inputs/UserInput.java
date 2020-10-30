@@ -7,7 +7,10 @@ import lombok.Setter;
 @Getter(value = AccessLevel.PUBLIC)
 @Setter(value = AccessLevel.PUBLIC)
 public class UserInput {
+    
     private String firstName;
+
     private String email;
+
     private String lastName;
 }

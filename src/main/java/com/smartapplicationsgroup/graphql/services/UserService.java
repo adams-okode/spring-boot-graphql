@@ -23,10 +23,10 @@ public class UserService {
      * @return
      * @throws UserNotFoundException
      */
-    public User getUserById(Long id) throws UserNotFoundException {
+    public User getUserById(Long id) {
         User user = userRepository.findById(id).orElse(null);
         if (user == null) {
-            throw new UserNotFoundException("User Cannot Be found");
+            throw new UserNotFoundException("Unable to find usser with specified ID");
         }
         return user;
     }

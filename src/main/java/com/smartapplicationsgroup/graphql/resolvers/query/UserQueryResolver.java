@@ -22,7 +22,7 @@ public class UserQueryResolver implements GraphQLQueryResolver {
      * @return
      * @throws UserNotFoundException
      */
-    public User findOneUser(Long id) throws UserNotFoundException {
+    public User findOneUser(Long id) {
         return userService.getUserById(id);
     }
 

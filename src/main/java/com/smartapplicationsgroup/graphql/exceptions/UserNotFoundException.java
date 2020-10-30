@@ -1,6 +1,12 @@
 package com.smartapplicationsgroup.graphql.exceptions;
 
-public class UserNotFoundException extends Exception {
+import java.util.List;
+
+import graphql.ErrorClassification;
+import graphql.GraphQLError;
+import graphql.language.SourceLocation;
+
+public class UserNotFoundException extends RuntimeException implements GraphQLError {
     /**
      *
      */
@@ -9,4 +15,15 @@ public class UserNotFoundException extends Exception {
     public UserNotFoundException(String message) {
         super(message);
     }
+
+    @Override
+    public ErrorClassification getErrorType() {
+        return null;
+    }
+
+    @Override
+    public List<SourceLocation> getLocations() {
+        return null;
+    }
+
 }

@@ -21,9 +21,14 @@ public class UserService {
      * 
      * @param id
      * @return
+     * @throws UserNotFoundException
      */
-    public User getUserById(Long id) {
-        return userRepository.findById(id).orElse(null);
+    public User getUserById(Long id) throws UserNotFoundException {
+        User user = userRepository.findById(id).orElse(null);
+        if (user == null) {
+            throw new UserNotFoundException("User Cannot Be found");
+        }
+        return user;
     }
 
     /**
